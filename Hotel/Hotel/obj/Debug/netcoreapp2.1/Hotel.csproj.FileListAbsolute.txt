@@ -1,0 +1,14 @@
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.csprojAssemblyReference.cache
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.csproj.CoreCompileInputs.cache
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.RazorAssemblyInfo.cache
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.RazorAssemblyInfo.cs
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.AssemblyInfoInputs.cache
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.AssemblyInfo.cs
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\bin\Debug\netcoreapp2.1\Hotel.deps.json
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\bin\Debug\netcoreapp2.1\Hotel.runtimeconfig.json
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\bin\Debug\netcoreapp2.1\Hotel.runtimeconfig.dev.json
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\bin\Debug\netcoreapp2.1\Hotel.dll
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\bin\Debug\netcoreapp2.1\Hotel.pdb
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.RazorTargetAssemblyInfo.cache
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.dll
+C:\Users\Chandan Mishra\source\repos\Hotel\Hotel\obj\Debug\netcoreapp2.1\Hotel.pdb
