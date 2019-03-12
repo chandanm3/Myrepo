@@ -29,7 +29,7 @@ namespace Hotel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<HotelContext>(opt =>
-                opt.UseInMemoryDatabase("HotelList"));
+                opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -47,6 +47,10 @@ namespace Hotel
 
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+
+        private class opt
+        {
         }
     }
 }

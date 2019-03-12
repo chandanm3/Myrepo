@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Hotel.Models;
 using Microsoft.EntityFrameworkCore;
-
 namespace Hotel.Models
 {
     public class HotelContext:DbContext
