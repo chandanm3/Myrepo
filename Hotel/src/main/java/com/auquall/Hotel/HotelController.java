@@ -1,5 +1,4 @@
 package com.auquall.Hotel;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class HotelController {
 	}
 	
 	@RequestMapping("/Hotel/{Id}")
-	public HotelModels getHotel(@PathVariable int Id) {
+	public HotelModels getHotel(@PathVariable String Id) {
 		return hotelservice.gethotel(Id);
 	}
 	
@@ -32,13 +31,13 @@ public class HotelController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT,value="/Hotel/{Id}")
-	public void updatehotel(@RequestBody HotelModels hotel,@PathVariable int Id) {
+	public void updatehotel(@RequestBody HotelModels hotel,@PathVariable String Id) {
 		hotelservice.updatehotel(Id,hotel);
 	}
 	
 
 	@RequestMapping(method=RequestMethod.DELETE,value="/Hotel/{Id}")
-	public void deletehotel(@PathVariable int Id) {
+	public void deletehotel(@PathVariable String Id) {
 		hotelservice.deletehotel(Id);
 	}
 }
