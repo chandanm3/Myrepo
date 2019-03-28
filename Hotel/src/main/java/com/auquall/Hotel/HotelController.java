@@ -1,6 +1,8 @@
 package com.auquall.Hotel;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +27,7 @@ public class HotelController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/Hotel")
-	public void addhotel(@RequestBody HotelModels hotel) {
+	public void addhotel(@RequestBody @Valid HotelModels hotel) {
 		hotelservice.addhotel(hotel);
 		
 	}

@@ -1,10 +1,23 @@
 package com.auquall.Hotel;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+
 public class HotelModels {
+	
+	@NotNull
 	private String Id;
+	
+	@NotNull
+	@Size(min=5,max=20,message="Name should be min 3 and max 20 character")
 	private String Name;
+	
+	@NotNull
 	private String Address;
+	@NotNull
 	private String Mobile;
+	@javax.validation.constraints.Email(message="Wrong Email")
 	private String Email;
 
 	public HotelModels()
