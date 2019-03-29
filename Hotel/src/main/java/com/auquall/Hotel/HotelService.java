@@ -8,10 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class HotelService {
-	private List<HotelModels> hotels=new ArrayList<>(Arrays.asList( 
-			  new HotelModels("1","Hyatt","New Delhi","9865342345","hyatt@gmail.com"),
-	          new HotelModels("2","Taj","Mumbai","8965441520","taj@yahoo.com")
-	          ));    
+	private List<HotelModels> hotels=new ArrayList<>(Arrays.asList());    
 	          
 	public List<HotelModels> gethotels()
 	{
