@@ -1,24 +1,15 @@
 package com.auquall.Hoteldatabase.Models;
 
-import javax.persistence.Column;
-
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Table(name="Hotel_Details")
 public class HotelModels {
 	
 	
 	@NotNull
-	@Column(name="Id")
 	private String Id;
-	@Column(name="H_Name")
 	private String Name;
-	@Column(name="Address")
 	private String Address;
-	@Column(name="Mobile")
 	private String Mobile;
-	@Column(name="Email")
 	private String Email;
 	
 	public HotelModels() {

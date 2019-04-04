@@ -6,7 +6,6 @@ import javax.annotation.Resource;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,13 +32,13 @@ public void addhotel(@RequestBody HotelModels hotel) {
 }
 
 @PutMapping(value = "/updatehotel")
-public void updatehotel(@RequestBody HotelModels hotel,@PathVariable String Id) {
-	hotelservice.updatehotel(Id,hotel);
+public void updatehotel(@RequestBody HotelModels hotel) {
+	hotelservice.updatehotel(hotel);
 }
 
-@DeleteMapping(value="/deletehotel/{Id}")
-public void deletehotel(@PathVariable String Id) {
-	hotelservice.deletehotel(Id);
+@DeleteMapping(value="/deletehotel")
+public void deletehotel(@RequestBody HotelModels hotel) {
+	hotelservice.deletehotel(hotel);
 }
 
 
