@@ -24,10 +24,18 @@ public class HotelRepo implements HotelDao {
 		this.template=template;
 	}
 	NamedParameterJdbcTemplate template;
+	
 	@Override
 	public List<HotelModels> findAll() {
 		// TODO Auto-generated method stub
 		return template.query("select * from hotel_details",new HotelrowMapper());
+		
+		}
+	@Override
+	public HotelModels gethotels(String Id){
+		return template.queryForObject("select * from Hotel_Details where Id=:Id",new MapSqlParameterSource("Id",Id),new HotelMapper());
+		 
+		 
 	}
 
 	@Override
@@ -37,15 +45,12 @@ public class HotelRepo implements HotelDao {
 		 KeyHolder holder = new GeneratedKeyHolder();
 		  SqlParameterSource param = new MapSqlParameterSource()
 				  .addValue("Id", hotel.getId())
-
 				  .addValue("H_Name", hotel.getName())
-
 				  .addValue("Address", hotel.getAddress())
-
 				  .addValue("Mobile", hotel.getMobile())
 		          .addValue("Email", hotel.getEmail());
 
-				          template.update(sql,param, holder);
+				  template.update(sql,param, holder);
 	}
 
 	@Override
@@ -70,30 +75,12 @@ public class HotelRepo implements HotelDao {
 	}
 
 	@Override
-	public void deletehotel(HotelModels hotel) {
+	public void deletehotel(String Id) {
 		// TODO Auto-generated method stub
-		 final String sql = "delete from Hotel_Details where Id=:Id";
-
-		 Map<String,Object> map=new HashMap<String,Object>();  
-
-		 map.put("Id", hotel.getId());
-
-		 template.execute(sql,map,new PreparedStatementCallback<Object>() {  
-
-		    @Override  
-
-		    public Object doInPreparedStatement(PreparedStatement ps)  
-
-		            throws SQLException, DataAccessException {  
-
-		        return ps.executeUpdate();  
-
-		    }  
-
-		});  
-
-
-
+		  String sql = "delete from Hotel_Details where Id=:Id";
+		  SqlParameterSource namedParameters = new MapSqlParameterSource("Id", String.valueOf(Id));
+		  template.update(sql, namedParameters);
+		
 	}
 
 

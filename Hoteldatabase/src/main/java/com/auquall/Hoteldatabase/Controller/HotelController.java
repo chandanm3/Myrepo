@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +27,11 @@ public List<HotelModels> gethotel(){
 	return hotelservice.findAll();
 }
 
+@GetMapping(value="/get/{Id}")
+public HotelModels gethotels(@PathVariable String Id) {
+	return hotelservice.gethotels(Id);
+}
+
 @PostMapping(value="/addhotel")
 public void addhotel(@RequestBody HotelModels hotel) {
 	hotelservice.addhotel(hotel);
@@ -36,10 +42,10 @@ public void updatehotel(@RequestBody HotelModels hotel) {
 	hotelservice.updatehotel(hotel);
 }
 
-@DeleteMapping(value="/deletehotel")
-public void deletehotel(@RequestBody HotelModels hotel) {
-	hotelservice.deletehotel(hotel);
-}
+@DeleteMapping(value="/deletehotel/{Id}")
+public void deletehotel(@PathVariable String Id) {
+	hotelservice.deletehotel(Id);
+	}
 
 
 

@@ -1,15 +1,22 @@
 package com.auquall.Hoteldatabase.Models;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class HotelModels {
 	
 	
 	@NotNull
 	private String Id;
+	@NotNull
+	@Size(min=5,max=50)
 	private String Name;
+	@NotNull
+	@Size(min=5,max=100)
 	private String Address;
+	@NotNull
 	private String Mobile;
+	@javax.validation.constraints.Email
 	private String Email;
 	
 	public HotelModels() {
