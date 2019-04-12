@@ -49,16 +49,16 @@ public class BookingModels {
 	}
 	public String getCheckin() {
 		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		 String strDate= formatter.format(date);
-		    return strDate;
+		 Checkin= formatter.format(date);
+		    return Checkin;
 	}
 	public void setCheckin(String checkin) {
 		this.Checkin = checkin;
 	}
 	public String getCheckout() {
 		 SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		 String strDate= formatter.format(date);
-		    return strDate;
+		 Checkout= formatter.format(date);
+		    return Checkout;
 	}
 	public void setCheckout(String checkout) {
 		this.Checkout = checkout;

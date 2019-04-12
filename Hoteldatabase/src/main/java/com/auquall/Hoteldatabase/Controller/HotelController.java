@@ -3,50 +3,42 @@ package com.auquall.Hoteldatabase.Controller;
 import java.util.List;
 
 import javax.annotation.Resource;
-
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auquall.Hoteldatabase.Models.HotelModels;
 
 @RestController
-@RequestMapping("/Controller")
 public class HotelController {
 	
 @Resource
 public HotelService hotelservice;
 
-@GetMapping(value="/getAll")
+@RequestMapping(value="/getAll", method=RequestMethod.GET)
 public List<HotelModels> gethotel(){
 	return hotelservice.findAll();
 }
 
-@GetMapping(value="/get/{Id}")
+@RequestMapping(value="/get/{Id}", method=RequestMethod.GET)
 public HotelModels gethotels(@PathVariable String Id) {
 	return hotelservice.gethotels(Id);
 }
 
-@PostMapping(value="/addhotel")
+@RequestMapping(value="/addhotel", method=RequestMethod.POST)
 public void addhotel(@RequestBody HotelModels hotel) {
 	hotelservice.addhotel(hotel);
 }
 
-@PutMapping(value = "/updatehotel")
+@RequestMapping(value = "/updatehotel", method=RequestMethod.PUT)
 public void updatehotel(@RequestBody HotelModels hotel) {
 	hotelservice.updatehotel(hotel);
 }
 
-@DeleteMapping(value="/deletehotel/{Id}")
+@RequestMapping(value="/deletehotel/{Id}", method=RequestMethod.DELETE)
 public void deletehotel(@PathVariable String Id) {
 	hotelservice.deletehotel(Id);
 	}
-
-
-
 }
