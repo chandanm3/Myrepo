@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+#label{
+    font-family: calibri;
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+}
+
+#box{
+     width: 60%;
+  padding: 8px 15px;
+   box-sizing: border-box;
+    border-radius: 10px;
+}
+#select{
+    padding: 8px 15px;
+    border-color: burlywood;
+    border-width: thin;
+}
+#check{
+    font-family: calibri;
+    font-size: 20px;
+    font-weight: bold;
+    color:brown;
+}
